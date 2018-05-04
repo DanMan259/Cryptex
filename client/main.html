@@ -9,10 +9,15 @@
   {{> info}}
 </body>
 
+
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
+
+<form enctype="multipart/form-data" action="/upload/image" method="post">
+    <input id="image-file" type="file" />
+</form>
 
 <template name="info">
   <h2>Learn Meteor!</h2>
