@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Cryptex User Statistics</h1>
   <!-- preparing a DOM with width and height for ECharts -->
   <div id="main" style="width: 600px;height:400px;"></div>
   <script type="text/javascript">
@@ -17,18 +17,18 @@
       // specify chart configuration item and data
       var option = {
           title: {
-              text: 'ECharts entry example'
+              text: 'User Profession'
           },
           tooltip: {},
           legend: {
-              data:['Sales']
+              data:['Profession']
           },
           xAxis: {
-              data: ["shirt","cardigan","chiffon shirt","pants","heels","socks"]
+              data: ["Students","Lawyers","Bankers","Unemployed","Teachers","Doctors"]
           },
           yAxis: {},
           series: [{
-              name: 'Sales',
+              name: 'Profession',
               type: 'bar',
               data: [5, 20, 36, 10, 10, 20]
           }]
