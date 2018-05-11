@@ -3,16 +3,16 @@
     <meta charset="utf-8">
     <!-- including ECharts file -->
     <script src="echarts.min.js"></script>
-    <title>cryptex</title>
+    <title>Cryptex</title>
 </head>
 
 <body>
   <h1>Cryptex User Statistics</h1>
   <!-- preparing a DOM with width and height for ECharts -->
-  <div id="main" style="width: 600px;height:400px;"></div>
+  <div id="profession" style="width: 600px;height:400px;"></div>
   <script type="text/javascript">
       // based on prepared DOM, initialize echarts instance
-      var myChart = echarts.init(document.getElementById('main'));
+      var myChart = echarts.init(document.getElementById('profession'));
 
       // specify chart configuration item and data
       var option = {
@@ -31,6 +31,34 @@
               name: 'Profession',
               type: 'bar',
               data: [5, 20, 36, 10, 10, 20]
+          }]
+      };
+      // use configuration item and data specified to show chart
+      myChart.setOption(option);
+  </script>
+
+  <div id="sex" style="width: 600px;height:400px;"></div>
+  <script type="text/javascript">
+      // based on prepared DOM, initialize echarts instance
+      var myChart = echarts.init(document.getElementById('sex'));
+
+      // specify chart configuration item and data
+      var option = {
+          title: {
+              text: 'User Sex'
+          },
+          tooltip: {},
+          legend: {
+              data:['Sex']
+          },
+          xAxis: {
+              data: ["Male","Female"]
+          },
+          yAxis: {},
+          series: [{
+              name: 'Sex',
+              type: 'bar',
+              data: [5, 20]
           }]
       };
       // use configuration item and data specified to show chart
