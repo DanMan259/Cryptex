@@ -1,11 +1,35 @@
-import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
+import '../imports/ui/body';
+/*
+//Get post Testing
 
-import './main.html';
+var nonce = Date.now(); // Unix timestamp
+var key = 'mNnrmLjbQN'; // My API Key
+var client = 4013457; // My Client ID
+var secret = '4db0228e9dd2c8052895ce77cc431299'; // My secret
+
+
+
+console.log(CryptoJS.HmacSHA256(nonce+key+client, secret).toString());
+
+var request = new XMLHttpRequest();
+
+request.open('GET', 'https://');
+request.onload = function(){
+    var Data = JSON.parse(request.responseText);
+    console.log(Data)
+};
+request.send();
+
+*/
+
+
+//import './main.html';
+
+
 
 //Test again
 
-function Upload() {
+/*function Upload() {
     var fileUpload = document.getElementById("fileUpload");
     var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt)$/;
     if (regex.test(fileUpload.value.toLowerCase())) {
@@ -33,9 +57,10 @@ function Upload() {
     } else {
         alert("Please upload a valid CSV file.");
     }
-}
+}*/
 
-
+/*
+// Parsing JSON
 $.getJSON('https://api.quadrigacx.com/v2/ticker?book=all', function(data) {
     console.log(data.btc_usd.volume);
     Upload();
@@ -59,3 +84,33 @@ $.getJSON('https://api.quadrigacx.com/v2/ticker?book=all', function(data) {
         },
     });
 });
+*/
+
+/*
+// Post Request
+
+
+functionfunction post(path, params, method) {
+    method = method || "post"; // Set method to post by default if not specified.
+
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    for(var key in params) {
+        if(params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", key);
+            hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+        }
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+*/

@@ -1,0 +1,25 @@
+<template name="members_info">
+    {{#if currentUser}}
+        Change Member info
+        <ul class="collapsible" data-collapsible="accordion">
+            {{member_info}}
+        </ul>
+    {{else}}
+        You need to be logged in first
+    {{/if}}
+</template>
+
+<template name="member_info">
+    <li>
+        <div class="collapsible-header">
+            First Name: {{firstName}}<br>
+            Last Name: {{lastName}}<br>
+            Email: {{email}}<br>
+            Created At: {{createdAt}}
+        </div>
+        <div class="collapsible-body">
+            <h5>Change Member Info</h5>
+            {{> quickForm collection="Members" doc=this type="update" autosave=false id=makeUniqueID}}
+        </div>
+    </li>
+</template>

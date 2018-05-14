@@ -1,0 +1,60 @@
+<template name="login">
+    <div class="section"></div>
+        <h5 class="center indigo-text">Please, login into your account</h5>
+        <div class="section"></div>
+        <div class="container center">
+            <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+                {{>loginGoogle}}
+                <form class="col s12" method="post">
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <input class='validate' type='email' name='email' id='login_email' />
+                            <label for='email'>Enter your email</label>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='input-field col s12'>
+                            <input class='validate' type='password' name='password' id='login_password' />
+                            <label for='password'>Enter your password</label>
+                        </div>
+                        <label style='float: right; padding-right: 10px'>
+                            <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+                        </label>
+                    </div>
+                    <br/>
+                    <div class='row center'>
+                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect green'>Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <div class="center">
+        <a href="/register">Need an account?</a>
+        <div class="section"></div>
+    </div>
+</template>
+
+<template name="loginGoogle">
+    <meta name="google-signin-client_id" content="993361724331-8aiovjt2i516bavljl01ue0ru5fco06b.apps.googleusercontent.com">
+    <div id="my-signin2"></div>
+    <script>
+        function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
+        function onFailure(error) {
+            console.log(error);
+        }
+        function renderButton() {
+            gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 310,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'light',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</template>
