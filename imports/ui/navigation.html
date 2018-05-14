@@ -1,0 +1,17 @@
+<template name="navigation">
+    <nav>
+        <div class="nav-wrapper green">
+            <a href="#" class="center brand-logo"> 
+                <img src="/related_files/test_logo.png">
+                Cryptex </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            {{#if currentUser}}
+                <li>{{> loginButtons}}</li>
+            {{else}}
+                <li><a href="/login">Sign In</a></li>
+            {{/if}}
+            </ul>
+        </div>
+    </nav>
+</template>

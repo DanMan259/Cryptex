@@ -1,0 +1,44 @@
+<template name="register">
+    <div class="section"></div>
+    <h5 class="center indigo-text">Register an account</h5>
+    <div class="section"></div>
+    <div class="container center">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+            <form class="col s12" method="post">
+                <div class='row'>
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate" autocomplete="on">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate" autocomplete="on">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate" autocomplete="off">
+                        <label for="email">Enter Your Email</label>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class="input-field col s6">
+                        <input id="password" type="password" class="validate" autocomplete="off">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="confirmed_pass" type="password" class="validate" autocomplete="off">
+                        <label for="confirmed_pass">Confirm Password</label>
+                    </div>
+                </div>
+                <div class='row center'>
+                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect green'>Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="center">
+        <a href="/login">Already Have an Account?</a>
+        <div class="section"></div>
+    </div>
+</template>
