@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Members } from '../api/members';
+import { MailingList } from "../api/mailingList";
 
 import './body.html';
 import './body.css';
@@ -11,6 +12,9 @@ import './main.html'
 import './register.html'
 import './login.html'
 import './footer.html'
+import './adminPanel.html'
+import './testing.html'
+
 
 AutoForm.setDefaultTemplate('materialize');
 
@@ -25,7 +29,7 @@ Template.registerHelper('formatDate', function(date){
 });
 
 Template.registerHelper('formatYear', function(){
-    return moment(Date()).format('YYYY');
+    return moment(moment()).format('YYYY');
 });
 
 Template.members.helpers({
@@ -40,7 +44,6 @@ Template.members_info.helpers({
     },
 });
 
-
 Template.member_info.helpers({
     makeUniqueID() {
         return this._id;
@@ -49,7 +52,16 @@ Template.member_info.helpers({
         const member = Members.findOne({_id: memberID});
     },
 });
+//Add to the Mailing List
+Template.signUp.events({
+    'submit form': function(event,template){
+        event.preventDefault();
+        var emailVar = template.find('#mailList-email').value;
 
+        MailingList.insert({ email:emailVar });
+    }
+});
+//Registering an Account
 Template.register.events({
     'submit form': function(event,template){
         event.preventDefault();
@@ -66,7 +78,7 @@ Template.register.events({
         });
     }
 });
-
+//Logging into an account
 Template.login.events({
     'submit form': function(event,template){
         event.preventDefault();
@@ -75,21 +87,11 @@ Template.login.events({
         Meteor.loginWithPassword(emailVar,passVar);
     }
 });
-
-/*Template.loginGoogle.events({
-    'click #loginGoogle': function(e, t) {
-        e.preventDefault();
-        Meteor.loginWithGoogle({
-            requestPermissions: ['https://picasaweb.google.com/data/'],
-            requestOfflineToken: 'true'
-        }, Router.go('user'));
-    }
-});*/
-
+//add member modal
 Template.members.onRendered(function(){
     $('#modal1').modal();
 });
-
+//Routing the pages
 Router.route('/', function(){
     this.layout('layout');
     this.render('main');
@@ -108,4 +110,14 @@ Router.route('/login', function(){
 Router.route('/member_info', function(){
     this.layout('layout');
     this.render('members_info');
+});
+
+Router.route('/adminPanel', function(){
+    this.layout('layout');
+    this.render('adminPanel');
+});
+
+Router.route('/testing', function(){
+    this.layout('layout');
+    this.render('testing');
 });
