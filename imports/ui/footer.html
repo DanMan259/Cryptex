@@ -1,42 +1,68 @@
 <template name="footer">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <footer class="page-footer grey darken-4">
-        <div class="Container">
             <div class="row">
-                <div class="col l6 s6">
-                    <div class="Container">
-                        <h3 class="white-text">Navigate</h3>
+                <div class="col l3 s3">
+                    <div class="container">
+                        <h2 class="white-text"><img src="rsz_test_logo.png"> Cryptex</h2>
+                    </div>
+                </div>
+                <div class="col l3 s3">
+                    <div class="container">
                         <ul>
-                            <li><a href="#" class="white-text">Home</a></li>
-                            <li><a href="#" class="white-text">Blog</a></li>
-                            <li><a href="#" class="white-text">Faq</a></li>
-                            <li><a href="#" class="white-text">Contact</a></li>
-                            <li><a href="#" class="white-text">About</a></li>
+                            <li><a class="white-text">The Project</a></li>
+                            <br>
+                            <li><a href="/" class="grey-text text-lighten">Home</a></li>
+                            <li><a href="#" class="grey-text text-lighten">Blog</a></li>
+                            <li><a href="#" class="grey-text text-lighten">FAQ</a></li>
+                            <li><a href="#" class="grey-text text-lighten">Contact</a></li>
+                            <li><a href="#" class="grey-text text-lighten">About</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col l6 s6">
-                    <div class="Container">
-                        <h4 class="white-text">Stay Connected</h4>
+                <div class="col l1 s1">
+                    <div class="container footer-icons">
+                        <ul>
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-google-plus"></a></li>
+                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col l5 s5">
+                    <div class="container">
+                        <a class="white-text">Stay Connected</a>
                         <p class="grey-text text-lighten-1">Join our Mailing List to stay up to date with our Newsletters. Also Connect with us on our socials</p>
-                        <div class="footer-icons">
-                            <a href="#"><i class="fa fa-facebook fa-3x" style="color:#3b5998;"></i></a>
-                            <a href="#"><i class="fa fa-twitter fa-3x" style="color:#1DA1F2;"></i></a>
-                            <a href="#"><i class="fa fa-linkedin fa-3x" style="color:#0077B5;"></i></a>
-                            <a href="#"><i class="fa fa-google-plus fa-3x" style="color:#d34836;"></i></a>
-                        </div>
+                        {{> signUp}}
                     </div>
                 </div>
             </div>
-            <hr width="95%" style="border-color:grey;">
-        </div>
+        <hr width="95%" style="border-color:grey;">
         <div class="footer center grey-text text-lighten-1">
             <div class="section"></div>
             <div class="container">
-                <a class="grey-text text-lighten-1" href="#">Privacy Policy |</a>
-                <a class="grey-text text-lighten-1" href="#"> Site Map |</a>
-                   © {{formatYear}} Cryptex - All Rights Reserved
+                <a class="grey-text text-lighten-1" href="#">Privacy Policy </a>
+                |
+                <a class="grey-text text-lighten-1" href="#"> Site Map </a>
+                | © {{formatYear}} Cryptex - All Rights Reserved
             </div>
-            <div class="section"></div>
         </div>
     </footer>
+</template>
+
+<template name="signUp">
+    <div class="row">
+        <div class="col l12 s12">
+            <form>
+                <div class="input-field col s8">
+                    <input id="mailList-email" type="email" class="validate">
+                    <label for="email">Enter Your Email</label>
+                </div>
+                <div class="col s4">
+                    <button type='submit' name='btn_login' class='col s12 btn btn-medium waves-effect waves-light green'>Sign-Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </template>

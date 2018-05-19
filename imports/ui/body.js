@@ -54,11 +54,13 @@ Template.member_info.helpers({
 });
 //Add to the Mailing List
 Template.signUp.events({
-    'submit form': function(event,template){
+    'submit form': function(event,template) {
         event.preventDefault();
         var emailVar = template.find('#mailList-email').value;
 
-        MailingList.insert({ email:emailVar });
+        Meteor.call('insertMailingList', {
+            emailVar,
+        });
     }
 });
 //Registering an Account

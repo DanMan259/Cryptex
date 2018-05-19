@@ -1,0 +1,8 @@
+{
+  "_comment": "this is fictional data for showing something can be done. Remove this comment in the final rendition",
+  "private": {
+    "digitalOcean": {
+      "host":"104.221.223.131"
+    }
+  }
+}

@@ -19,7 +19,7 @@
         </div>
         <div class="collapsible-body">
             <h5>Change Member Info</h5>
-            {{> quickForm collection="Members" doc=this type="update" autosave=false id=makeUniqueID}}
+            {{> quickForm collection="Members" type="method-update" doc=this  autosave=true id=makeUniqueID meteormethod="updateMember"}}
         </div>
     </li>
 </template>

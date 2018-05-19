@@ -1,13 +1,17 @@
 <template name="layout">
     <body>
+        <div class="content">
             <div class="row">
                 {{> navigation}}
             </div>
             <div class="row">
                 {{> yield}}
             </div>
+        </div>
+        <div class="footer">
             <div class="row">
                 {{> footer}}
             </div>
+        </div>
     </body>
 </template>
