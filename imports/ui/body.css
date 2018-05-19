@@ -1,4 +1,108 @@
-body > div:nth-child(1) > nav > div > a > img{
-    padding-left: 10px !important;
-    padding-top: 5px;
+/*GENERAL CSS*/
+body {
+    font-family: 'Raleway';
+    font-size: 22px;
+    /*font-style:'light';*/
+}
+
+/*HEADER CSS*/
+/*Logo and Name CSS*/
+body > div.content > div:nth-child(1) > nav > div > a{
+    position: relative;
+    bottom: 6px;
+}
+body > div.content > div:nth-child(1) > nav > div > a > img{
+    position: relative;
+    top: 14px;
+}
+
+/*NEEDED CONTENT CSS, NOTE: Only put stuff here if it would apply to every page*/
+.content {
+    min-height: calc(100vh - 70px);
+}
+.footer {
+    height: 50px;
+    margin-bottom: 0px;
+    padding-bottom: 80px;
+}
+
+
+/*Other Css put in respective files to not cross contaminate*/
+
+
+
+
+
+/*FOOTER CSS*/
+/*Footer Social Css*/
+body > div.footer > div > footer > div.row > div.col.l1.s1 > div > ul > li:nth-child(1) > a.fa, body > div.footer > div > footer > div.row > div.col.l1.s1 > div > ul > li:nth-child(2) > a.fa,
+body > div.footer > div > footer > div.row > div.col.l1.s1 > div > ul > li:nth-child(3) > a.fa, body > div.footer > div > footer > div.row > div.col.l1.s1 > div > ul > li:nth-child(4) > a.fa{
+    padding: 20px;
+    font-size: 25px;
+    height: 65px;
+    width: 65px;
+    text-decoration: none;
+    text-align:center;
+    margin: 5px 0px 5px 0px;
+    border-radius: 50%;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+    background: #424242 ;
+    color: #9e9e9e;
+}
+
+body > div.footer > div > footer > div.row > div.col.l1.s1 > div > ul > li:nth-child(1) > a.fa.fa-facebook:hover {
+    background: #3B5998 ;
+    color: white;
+}
+body > div.footer > div > footer > div.row > div.col.l1.s1 > div > ul > li:nth-child(2) > a.fa.fa-twitter:hover {
+    background: #55ACEE;
+    color: white;
+}
+body > div.footer > div > footer > div.row > div.col.l1.s1 > div > ul > li:nth-child(3) > a.fa.fa-google-plus:hover {
+    background: #dd4b39;
+    color: white;
+}
+body > div.footer > div > footer > div.row > div.col.l1.s1 > div > ul > li:nth-child(4) > a.fa.fa-linkedin:hover {
+    background: #007bb5;
+    color: white;
+}
+
+/*Footer First Column Logo and Name*/
+body > div.footer > div > footer > div.row > div:nth-child(1) > div > h2{
+    position: relative;
+    top: 90px;
+    left: 50px;
+}
+body > div.footer > div > footer > div.row > div:nth-child(1) > div > h2 > img{
+    position: relative;
+    top: 6px;
+}
+
+/*Footer Second Column Hovering over*/
+body > div.footer > div > footer > div.row > div:nth-child(2) > div > ul > li:nth-child(3) > a:hover, body > div.footer > div > footer > div.row > div:nth-child(2) > div > ul > li:nth-child(4) > a:hover,
+body > div.footer > div > footer > div.row > div:nth-child(2) > div > ul > li:nth-child(5) > a:hover, body > div.footer > div > footer > div.row > div:nth-child(2) > div > ul > li:nth-child(6) > a:hover,
+body > div.footer > div > footer > div.row > div:nth-child(2) > div > ul > li:nth-child(7) > a:hover, body > div.footer > div > footer > div.footer.center.grey-text.text-lighten-1 > div.container > a:nth-child(1):hover,
+body > div.footer > div > footer > div.footer.center.grey-text.text-lighten-1 > div.container > a:nth-child(2):hover {
+    opacity: 0.5;
+}
+
+/*Footer Second Coloumn*/
+body > div.footer > div > footer > div.row > div:nth-child(2) > div > ul{
+    position: relative;
+    left: 30px;
+    top: 20px;
+}
+/*Footer Fourth Column*/
+
+body > div.footer > div > footer > div.row > div.col.l5.s5 > div{
+    position: relative;
+    top: 40px;
+}
+body > div.footer > div > footer > div.row > div.col.l5.s5 > div > div > div > form > div.col.s4 > button{
+    position: relative;
+    top: 25px;
 }

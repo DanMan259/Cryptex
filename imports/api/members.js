@@ -5,6 +5,17 @@ SimpleSchema.extendOptions(['autoform']);
 
 export const Members = new Mongo.Collection('members');
 
+Members.allow({
+    insert() { return false; },
+    update() { return false; },
+    remove() { return false; },
+});
+
+Members.deny({
+    insert() { return true; },
+    update() { return true; },
+    remove() { return true; },
+});
 
 const MemberSchema = new SimpleSchema({
     firstName: {
@@ -31,12 +42,3 @@ const MemberSchema = new SimpleSchema({
 });
 
 Members.attachSchema(MemberSchema);
-
-var allowAll = function () {
-    return true;
-};
-Members.allow({
-    insert: allowAll,
-    update: allowAll,
-    remove: allowAll
-});

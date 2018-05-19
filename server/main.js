@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import _ from 'lodash';
 import faker from 'faker';
+import { MailingList} from "../imports/api/mailingList";
 import { Members } from '../imports/api/members';
 
 Meteor.startup(() => {
@@ -18,7 +19,7 @@ Meteor.startup(() => {
             const lastName = faker.name.lastName();
             const email = faker.internet.email();
 
-            Members.insert({
+            Meteor.call('insertMember', {
                 firstName,
                 lastName,
                 email,

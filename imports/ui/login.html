@@ -23,7 +23,7 @@
                     </div>
                     <br/>
                     <div class='row center'>
-                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect green'>Login</button>
+                        <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect waves-light green hoverable'>Login</button>
                     </div>
                 </form>
             </div>
@@ -32,6 +32,11 @@
         <a href="/register">Need an account?</a>
         <div class="section"></div>
     </div>
+    <style>
+        body > div.content > div:nth-child(2) > div:nth-child(5) > a:hover ,body > div.content > div:nth-child(2) > div.container.center > div > form > div:nth-child(2) > label > a > b:hover {
+         opacity: 0.5;
+        }
+    </style>
 </template>
 
 <template name="loginGoogle">

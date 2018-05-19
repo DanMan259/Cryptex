@@ -1,0 +1,16 @@
+<template name="adminPanel">
+    <div class="container">
+        <div class="row">
+            {{#if currentUser}}
+                <div class="col s12 m4 l3 card-panel grey">
+                    <h3>Side Panel</h3>
+                </div>
+                <div class="col s12 m8 l9">
+                    {{> members}}
+                </div>
+            {{else}}
+                {{> login}}
+            {{/if}}
+        </div>
+    </div>
+</template>
