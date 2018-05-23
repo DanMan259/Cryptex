@@ -1,0 +1,62 @@
+/////This contains a simple example of an upload for a file this would require for us to know the parameters that were going to be inputed so we could calucalte stuff further
+Next steps for this part get a better file upload system maybe like dropzone.js or something that looks similar
+Also decide on whther on not to show a completed chart when the file is uploaded\\\\\
+
+////This is the html part of it it would need to go in a template file\\\\
+    <div class="container">
+        <form action="#">
+            <div class="file-field input-field">
+                <div class="btn green hoverable">
+                    <span>File</span>
+                    <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                    <input id="uploadFile" class="file-path validate" type="text" placeholder="Upload one or more files">
+                </div>
+                <div class='row right'>
+                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect waves-light green hoverable'>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+////This is the template helper that would go in the body.js file when needed to be implemented\\\\
+    Template.test.events({
+                'submit form': function(event,template) {
+                    event.preventDefault();
+                    var userFile = template.find('#uploadFile').value;
+                    console.log(userFile);
+                    $(document).ready(function () {
+                        $.ajax({
+                            url: userFile,
+                            dataType: "text",
+                            success: function (data) {
+                                var user_data = data.split(/\r?\n|\r/);
+                                var table_data = '<table class="table table-bordered table-striped">';
+                                for (var count = 0; count < user_data.length; count++) {
+                                    var cell_data = user_data[count].split(",");
+                                    //Next line is the price column an example of how to gain all the info
+                                    console.log(cell_data[2]);
+                                    // This chunk of code is apart of the for statement if you would like to make a table use the original source code for complete help
+                                    /*
+                                    table_data += '<tr>';
+                                    for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+                                        if (count === 0) {
+                                            table_data += '<th>' + cell_data[cell_count] + '</th>';
+                                        }
+                                        else {
+                                            table_data += '<td>' + cell_data[cell_count] + '</td>';
+                                        }
+                                    }
+                                table_data += '</tr>';
+                            }
+                            table_data += '</table>';
+                            $('#employee_table').html(table_data);
+                            */
+                        }
+                    }
+                });
+            });
+        }
+    });

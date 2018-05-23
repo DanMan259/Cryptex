@@ -1,5 +1,4 @@
 import {Mongo} from "meteor/mongo";
-import {Members} from "./members";
 
 export const MailingList = new Mongo.Collection('mailingList');
 

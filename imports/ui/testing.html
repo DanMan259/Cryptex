@@ -1,7 +1,20 @@
 <template name="testing">
     {{#if currentUser}}
-        Put Stuff here if you want to test. We can see how completed pages would look before making them into their own template files
+        <!--In order to run the template change the false to true in the if statement below-->
+        {{# if false}}
+            {{> test}}
+        {{else}}
+            <p>
+            Put stuff in the test template if you want to test how something looks like.
+            We can see how completed pages would look before making them into their own template files.
+            Remember to turn the if statement to true to test.
+            </p>
+        {{/if}}
     {{else}}
         {{> login}}
     {{/if}}
+</template>
+
+<template name="test">
+
 </template>
