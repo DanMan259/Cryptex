@@ -1,11 +1,10 @@
 <template name="navigation">
     <nav>
         <div class="nav-wrapper green">
-            <a href="#" class="center brand-logo">
+            <a href="/" class="center brand-logo">
                 <img src="rsz_test_logo.png">
                 Cryptex </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
                 {{#if currentUser}}
                     <li><a href="/adminPanel">Admin Tools</a></li>
                     <li><a href="/testing">Testing Page</a></li>

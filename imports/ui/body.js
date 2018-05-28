@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Members } from '../api/members';
-import { MailingList } from "../api/mailingList";
 
 import './body.html';
 import './body.css';
@@ -14,7 +13,6 @@ import './login.html'
 import './footer.html'
 import './adminPanel.html'
 import './testing.html'
-
 
 AutoForm.setDefaultTemplate('materialize');
 

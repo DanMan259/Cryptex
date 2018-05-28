@@ -184,6 +184,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/dynamic-import/0.3.0/web.browser/dynamic-versions.js" />
         <item url="file://$USER_HOME$/.meteor/packages/dynamic-import/0.3.0/web.browser/security.js" />
         <item url="file://$USER_HOME$/.meteor/packages/dynamic-import/0.3.0/web.browser/server.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/eahefnawy_accounts-coinbase/0.0.1-plugins.0/web.browser/packages/eahefnawy_accounts-coinbase.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime-client/0.6.2/web.browser/runtime.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ejson/1.1.0/web.browser/custom_models_for_tests.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ejson/1.1.0/web.browser/ejson.js" />
@@ -667,6 +668,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/dynamic-import/0.3.0/web.browser/dynamic-versions.js" />
       <root url="file://$USER_HOME$/.meteor/packages/dynamic-import/0.3.0/web.browser/security.js" />
       <root url="file://$USER_HOME$/.meteor/packages/dynamic-import/0.3.0/web.browser/server.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/eahefnawy_accounts-coinbase/0.0.1-plugins.0/web.browser/packages/eahefnawy_accounts-coinbase.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime-client/0.6.2/web.browser/runtime.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ejson/1.1.0/web.browser/custom_models_for_tests.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ejson/1.1.0/web.browser/ejson.js" />

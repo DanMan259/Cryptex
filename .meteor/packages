@@ -33,3 +33,6 @@ aldeed:autoform
 meteortesting:mocha
 aldeed:collection2-core
 fortawesome:fontawesome
+oauth
+eahefnawy:accounts-coinbase
+service-configuration

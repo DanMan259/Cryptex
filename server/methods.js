@@ -2,6 +2,8 @@ import { Meteor } from 'meteor/meteor';
 import { Members } from "../imports/api/members";
 import { MailingList } from "../imports/api/mailingList";
 
+//Use Methods to make calls to the backend
+
 Meteor.methods({
     insertMember: (member) => {
         Members.insert(member)

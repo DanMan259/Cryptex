@@ -1,6 +1,5 @@
 import { Meteor } from 'meteor/meteor';
 import faker from 'faker';
-import { Members } from "./members";
 
 if (Meteor.isServer){
     describe('Add member', () => {
@@ -9,7 +8,7 @@ if (Meteor.isServer){
             const lastName = faker.name.lastName();
             const email = faker.internet.email();
 
-            Members.insert({
+            Meteor.call('insertMember', {
                 firstName,
                 lastName,
                 email,
