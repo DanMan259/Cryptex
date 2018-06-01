@@ -4,7 +4,7 @@ import faker from 'faker';
 import { Members } from '../imports/api/members';
 
 Meteor.startup(() => {
-
+    //Make more secure look into settings.json or something
     ServiceConfiguration.configurations.upsert(
         { service: 'coinbase' },
         {

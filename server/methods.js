@@ -15,5 +15,8 @@ Meteor.methods({
         const {firstName, lastName, email} = room.modifier.$set;
         Members.update(member._id,{$set: {firstName, lastName, email}});
     },
-    /**/
+    //fix this
+    deleteUser: () => {
+        db.users.remove({_id:this.userId});
+    }
 });

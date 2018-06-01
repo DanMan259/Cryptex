@@ -13,8 +13,23 @@ import './login.html'
 import './footer.html'
 import './adminPanel.html'
 import './testing.html'
+import './finishCoinbase.html'
 
 AutoForm.setDefaultTemplate('materialize');
+
+function logValue(){
+    var profileConfig = ServiceConfiguration.configurations.findOne({service: 'password'});
+    var coinConfig = ServiceConfiguration.configurations.findOne({service: 'coinbase'});
+    var googleConfig = ServiceConfiguration.configurations.findOne({service: 'google'});
+    if (!Meteor.user())
+        return 0;
+    else if (coinConfig && !profileConfig)
+        return 1;
+    else if (googleConfig && !profileConfig)
+        return 2;
+    else
+        return 3;
+}
 
 window.Members= Members;
 
@@ -28,6 +43,12 @@ Template.registerHelper('formatDate', function(date){
 
 Template.registerHelper('formatYear', function(){
     return moment(moment()).format('YYYY');
+});
+
+Template.finishCoinbase.helpers({
+    userProfile() {
+        return Meteor.user()
+    },
 });
 
 Template.members.helpers({
@@ -52,27 +73,30 @@ Template.member_info.helpers({
 });
 //Add to the Mailing List
 Template.signUp.events({
-    'submit form': function(event,template) {
+    'submit form': function (event, template) {
         event.preventDefault();
         var emailVar = template.find('#mailList-email').value;
 
-        Meteor.call('insertMailingList', {
-            emailVar,
-        });
+        Meteor.call('insertMailingList', ({"email": emailVar}),
+            (err) => {
+                if (err) {
+                    alert(err);
+                }
+            }
+        )
     }
 });
+
 //Registering an Account
 Template.register.events({
     'submit form': function(event,template){
         event.preventDefault();
-        var firstVar = template.find('#first_name').value;
-        var lastVar = template.find('#last_name').value;
+        var nameVar = template.find('#name').value;
         var emailVar = template.find('#email').value;
         var passVar = template.find('#password').value;
 
         Accounts.createUser({
-            firstName: firstVar,
-            lastName:lastVar,
+            name:nameVar,
             email:emailVar,
             password:passVar,
         });
@@ -104,7 +128,15 @@ Router.route('/register', function(){
 
 Router.route('/login', function(){
     this.layout('layout');
-    this.render('login');
+
+    if (logValue()===0)
+        this.render('login');
+    else{
+        if (logValue()===1 || logValue()===2)
+            Router.go('/finishRegister')
+        else if (logValue()===3)
+            Router.go('/')
+    }
 });
 
 Router.route('/member_info', function(){
@@ -120,4 +152,16 @@ Router.route('/adminPanel', function(){
 Router.route('/testing', function(){
     this.layout('layout');
     this.render('testing');
+});
+Router.route('/finishRegister', function(){
+    this.layout('layout');
+    if (logValue()===0)
+        Router.go('/login');
+    else if(logValue()===1)
+        this.render('finishCoinbase');
+    else if (logValue()===2)
+        this.render('finishGoogle')
+    else{
+        Router.go('/');
+    }
 });

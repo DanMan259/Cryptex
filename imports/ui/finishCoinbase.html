@@ -1,14 +1,14 @@
-<template name="register">
+<template name="finishCoinbase">
     <div class="section"></div>
-    <h5 class="center indigo-text">Register an account</h5>
+    <h5 class="center indigo-text">Finish registration with Coinbase</h5>
     <div class="section"></div>
     <div class="container center">
         <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
             <form class="col s12" method="post">
                 <div class='row'>
                     <div class="input-field col s12">
-                        <input id="name" type="text" class="validate" autocomplete="on">
-                        <label for="name">Enter Your Name</label>
+                        <input value={{userProfile.profile.name}} id="name" type="text" class="validate" autocomplete="on">
+                        <label class="active" for="name">Enter Your Name</label>
                     </div>
                 </div>
                 <div class='row'>
@@ -33,13 +33,21 @@
             </form>
         </div>
     </div>
-    <div class="center">
-        <a href="/login">Already Have an Account?</a>
-        <div class="section"></div>
-    </div>
     <style>
         body > div.content > div:nth-child(2) > div:nth-child(5) > a:hover {
             opacity: 0.5;
         }
     </style>
+    <script>
+        //take client id from seeting.json or something take this out number out
+        $.ajax({
+            url: 'https://www.coinbase.com/oauth/authorize?response_type=code&client_id=81111e7e9aa73ea93a8b494519c4918af0e537e4cbc337c74536e41c23d3edbe&redirect_uri=http://localhost:3000/_oauth/coinbase&scope=wallet:user:email',
+            dataType: 'json',
+            type: 'post',
+            success: function( resultData ){
+                console.log(resultData);
+            },
+        });
+    </script>
+    <script src="../api/deleteData.js"></script>
 </template>
