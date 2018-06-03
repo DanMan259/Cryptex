@@ -160,7 +160,7 @@ Router.route('/finishRegister', function(){
     else if(logValue()===1)
         this.render('finishCoinbase');
     else if (logValue()===2)
-        this.render('finishGoogle')
+        this.render('finishGoogle');
     else{
         Router.go('/');
     }

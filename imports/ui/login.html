@@ -115,7 +115,14 @@
     </a>
     <script>
         function coinbaseRedirect() {
-            Meteor.loginWithCoinbase(function (err) {
+            Meteor.loginWithCoinbase({
+                requestPermissions: ['wallet:user:email']
+            }, (error,result) => {
+                if (error) {
+                    alert(error);
+                } else {
+                    console.log(result);
+                }
             });
         }
     </script>

@@ -38,16 +38,5 @@
             opacity: 0.5;
         }
     </style>
-    <script>
-        //take client id from seeting.json or something take this out number out
-        $.ajax({
-            url: 'https://www.coinbase.com/oauth/authorize?response_type=code&client_id=81111e7e9aa73ea93a8b494519c4918af0e537e4cbc337c74536e41c23d3edbe&redirect_uri=http://localhost:3000/_oauth/coinbase&scope=wallet:user:email',
-            dataType: 'json',
-            type: 'post',
-            success: function( resultData ){
-                console.log(resultData);
-            },
-        });
-    </script>
     <script src="../api/deleteData.js"></script>
 </template>
