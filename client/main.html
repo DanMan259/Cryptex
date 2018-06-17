@@ -1,16 +1,18 @@
 <head>
     <meta charset="utf-8">
-    <title>Charts</title>
+    <title>Cryptax</title>
+    <link rel="icon" href="/favicon.png" type="png">
     <script src="../ECharts/echarts.min.js"></script>
 </head>
 <body>
 <header role="banner">
-    <h1>Chart Examples</h1>
+    <h1>Charts</h1>
 </header>
 
 <main role="main">
     <!-- Coin History Chart -->
-    <div id="coin" style="width: 800px;height:400px;"></div>
+    <div id="coin"></div>
+    <!--<button>BTC</button> <button>ETC</button>-->
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('coin'));
         myChart.setOption({
@@ -88,9 +90,9 @@
             ]
         })
     </script>
-    <p></p>
+
     <!-- Single Coin Chart -->
-    <div id="btc" style="width: 800px;height:400px;"></div>
+    <div id="btc"></div>
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('btc'));
         myChart.setOption({
@@ -157,9 +159,9 @@
             ]
         })
     </script>
-    <p></p>
+
     <!-- User Portfolio Chart -->
-    <div id="portfolio" style="width: 600px;height:600px;"></div>
+    <div id="portfolio"></div>
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('portfolio'));
         var icons = {
@@ -282,5 +284,7 @@
          });*/
     </script>
 </main>
-
+<footer role="contentinfo">
+    <p>Copyright &copy; 2018 Cryptex.</p>
+</footer>
 </body>
