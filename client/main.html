@@ -6,7 +6,15 @@
 </head>
 <body>
 <header role="banner">
-    <h1>Charts</h1>
+    <h1>CrypTax </h1>
+    <nav role="navigation">
+        <ul>
+            <li><a href="main.html" title="Charts">Charts</a></li>
+            <li><a>User Statistics</a></li>
+            <li><a>Wallet</a></li>
+            <li><a>Account</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main role="main">
@@ -18,7 +26,8 @@
         myChart.setOption({
             title: {
                 //left: 'center',
-                text: 'Multicoin History - 2017'
+                text: 'Multicoin History - 2017',
+                textStyle: {fontWeight: 'normal'}
             },
             tooltip: {
                 trigger: 'axis',
@@ -98,7 +107,8 @@
         myChart.setOption({
             title: {
                 //left: 'center',
-                text: 'Bitcoin History - 2015'
+                text: 'Bitcoin History - 2015',
+                textStyle: {fontWeight: 'normal'}
             },
             tooltip: {
                 trigger: 'axis',
@@ -172,7 +182,8 @@
         myChart.setOption({
             title: {
                 left: 'center',
-                text: 'Personal Portfolio'
+                text: 'Personal Portfolio',
+                textStyle: {fontWeight: 'normal'}
             },
             legend: {
                 orient: 'vertical',
