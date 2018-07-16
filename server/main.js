@@ -9,9 +9,10 @@ Meteor.startup(() => {
     (async function main () {
         // Exchange Instantiation
         const exchange = new ccxt.binance ({
-            apiKey: 'PtDunO2A9dmPTdBRacmztqMLm23s5Z3Z5quTUuHGxKEEbPlCRu2bPetvfpY5HNox',
-            secret: 'lnDmDxAFcWc5MPXI0Jez6VLlFCrHMysMbObacWUoqhn2bLHOlhKwDRDczWvMZatq',
+            apiKey: 'PVefYZQzFACzhbd8C2U79XSy8moeB0DI7FWVBNJJKWBYarsgsmxVAyZaMoPGCCWP',
+            secret: 'rhPJFhJnon4x8oSCtL7noh8HqtSFB0OlaRH5OnOOX7WqMheyPEQMoMdghjVlkxBD',
             'enableRateLimit': true,
+            //'verbose': true  //HTTP log for debugging
         });
 
         //Pre-loading markets
@@ -23,10 +24,12 @@ Meteor.startup(() => {
         //Market Depth
         /*const limit = 5;
         const orderBook = await exchange.fetchOrderBook (symbol, limit);
-        console.log(orders);*/
+        console.log(orderBook);*/
 
         //Market Price
-        /*let bid = orderBook.bids.length ? orderBook.bids[0][0] : undefined;
+        /*const limit = 5;
+        const orderBook = await exchange.fetchOrderBook (symbol, limit);
+        let bid = orderBook.bids.length ? orderBook.bids[0][0] : undefined;
         let ask = orderBook.asks.length ? orderBook.asks[0][0] : undefined;
         let spread = (bid && ask) ? ask - bid : undefined;
         console.log (exchange.id, 'market price', { bid, ask, spread });*/
@@ -56,7 +59,7 @@ Meteor.startup(() => {
         //Personal Trades
         /*const trades = await exchange.fetchMyTrades(symbol);
         console.log(trades);*/
-    }) ();
+    } ());
 });
 
 
