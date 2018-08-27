@@ -1,0 +1,152 @@
+<template name="coinList">
+    <div class="widen">
+        <article class="container">
+            <div class="table-options">
+                <div class="input-field">
+                    <select id="fiat-selector">
+                        <option value="1">USD</option>
+                        <option value="2">CAD</option>
+                        <option value="3">EUR</option>
+                        <option value="4">GBP</option>
+                    </select>
+                    <label>Quote Currency</label>
+                </div>
+                <div class="switch">
+                    <label class="offline-toggle-box">
+                        <i class="material-icons green-text">cloud_done</i>
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        <i class="material-icons red-text">cloud_off</i>
+                    </label>
+                </div>
+            </div>
+
+            <section>
+                <div class="row heading">
+                    <h3 class="col s2">Coin</h3>
+                    <h3 class="col s2">Price</h3>
+                    <h3 class="col s2">Price Change (1-day)</h3>
+                    <h3 class="col s2">Volume (24 hr)</h3>
+                    <h3 class="col s2">Market Cap</h3>
+                    <h3 class="col s2">Circulating Supply</h3>
+                </div>
+                <div class="divider"></div>
+
+                <div class="row-container" id="1">
+                    <div class="row row-content">
+                        <div class="col s2 entry">
+                            <img src="/bitcoin.png" width="35" height="35">
+                            <p>Bitcoin</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>8,179.32</p>
+                        </div>
+                        <div class="col s2 entry green-text text-darken-1">
+                            <i class="material-icons">arrow_upward</i>
+                            <p>2.07%</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>5.8 B</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>140 B</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>17.2 M</p>
+                        </div>
+                    </div>
+
+                    <div class="extra-content" id="pop-up-1">
+                        <div id='minChart1' style='width:600px;height:344px;'></div>
+
+                        <div class="extra-content-right">
+                            <p>Last Trade: <span class="currency">&dollar;</span>10/Binance</p>
+                            <a href="/charts" class="red darken-4 waves-effect waves-light btn z-depth-0"><i class="material-icons right">navigate_next</i>Detailed Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-container" id="2">
+                    <div class="row row-content">
+                        <div class="col s2 entry">
+                            <img src="/ethereum.png" height="35">
+                            <p>Ethereum</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>473.89</p>
+                        </div>
+                        <div class="col s2 entry red-text text-darken-1">
+                            <i class="material-icons ">arrow_downward</i>
+                            <p>0.81%</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>1.91 B</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>47.8 B</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>101 M</p>
+                        </div>
+                    </div>
+
+                    <div class="extra-content" id="pop-up-2">
+                        <div id='minChart2' style='width:600px;height:344px;'></div>
+
+                        <div class="extra-content-right">
+                            <p>Last Trade: <span class="currency">&dollar;</span>10/Binance</p>
+                            <a href="/charts" class="red darken-4 waves-effect waves-light btn z-depth-0"><i class="material-icons right">navigate_next</i>Detailed Info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-container" id="3">
+                    <div class="row row-content">
+                        <div class="col s2 entry">
+                            <img src="/litecoin.png" width="35" height="35">
+                            <p>Litecoin</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>86.62</p>
+                        </div>
+                        <div class="col s2 entry red-text text-darken-1">
+                            <i class="material-icons">arrow_downward</i>
+                            <p>2.3%</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>306 M</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>4.99 B</p>
+                        </div>
+                        <div class="col s2 entry">
+                            <span class="currency">&dollar;</span>
+                            <p>57.6 M</p>
+                        </div>
+                    </div>
+
+                    <div class="extra-content" id="pop-up-3">
+                        <div id='minChart3' style='width:600px;height:344px;'></div>
+
+                        <div class="extra-content-right">
+                            <p>Last Trade: <span class="currency">&dollar;</span>10/Binance</p>
+                            <a href="/charts" class="red darken-4 waves-effect waves-light btn z-depth-0"><i class="material-icons right">navigate_next</i>Detailed Info</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </article>
+    </div>
+</template>

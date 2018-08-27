@@ -1,0 +1,88 @@
+Version 1
+
+HTML
+------------------------------------------------------------------------------------------------------------------------
+<table class="centered">
+                <thead>
+                <tr class="row">
+                    <th class="col s2">Coin</th>
+                    <th class="col s2">Price</th>
+                    <th class="col s2">Price Change (1-day)</th>
+                    <th class="col s2">Volume (24 hr)</th>
+                    <th class="col s2">Market Cap</th>
+                    <th class="col s2">Circulating Supply</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="row valign-wrapper">
+                    <td class="coin-box col s2">
+                        <img src="/bitcoin.png" width="25" height="25">&nbsp;Bitcoin
+                    </td>
+                    <td class="col s2"><span class="currency">&dollar;</span>8,179.32</td>
+                    <td class="green-text text-darken-1 table-center col s2 hh">
+                        <i class="material-icons">arrow_upward</i> 2.07%
+                    </td>
+                    <td class="col s2"><span class="currency">&dollar;</span>5.8 B</td>
+                    <td class="col s2"><span class="currency">&dollar;</span>140 B</td>
+                    <td class="col s2"><span class="currency">&dollar;</span>17.2 M</td>
+                    <!--<div id="coin" style="display:none; width:300px; height:300px;"></div>-->
+                </tr>
+                <tr class="row valign-wrapper">
+                    <td class="coin-box col s2">
+                        <img src="/ethereum-backup.png" width="25" height="25">&nbsp;Ethereum
+                    </td>
+                    <td class="col s2"><span class="currency">&dollar;</span>473.89</td>
+                    <td class="red-text text-darken-1 table-center col s2">
+                        <i class="material-icons">arrow_downward</i> 0.81%
+                    </td>
+                    <td class="col s2"><span class="currency">&dollar;</span>1.91 B</td>
+                    <td class="col s2"><span class="currency">&dollar;</span>47.8 B</td>
+                    <td class="col s2"><span class="currency">&dollar;</span>101 M</td>
+                </tr>
+                <tr class="row valign-wrapper">
+                    <td class="coin-box col s2">
+                        <img src="/litecoin.png" width="25" height="25">&nbsp;Litecoin
+                    </td>
+                    <td class="col s2"><span class="currency">&dollar;</span>86.62</td>
+                    <td class="red-text text-darken-1 table-center col s2">
+                        <i class="material-icons">arrow_downward</i> 2.37%
+                    </td>
+                    <td class="col s2"><span class="currency">&dollar;</span>306 M</td>
+                    <td class="col s2"><span class="currency">&dollar;</span>4.99 B</td>
+                    <td class="col s2"><span class="currency">&dollar;</span>57.6 M</td>
+                </tr>
+                </tbody>
+</table>
+
+CSS
+------------------------------------------------------------------------------------------------------------------------
+thead{
+    font-family: 'Roboto', sans-serif;
+}
+thead > tr > th{
+   padding-bottom: 1rem !important;
+}
+.table-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coin-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+tbody tr{
+    margin: 0 !important;
+    height: 56px;
+    -webkit-transition: height 0.8s, box-shadow 0.8s, -webkit-box-shadow 0.8s !important;
+    transition: height 0.8s, box-shadow 0.8s, -webkit-box-shadow 0.8s !important;
+}
+/*tbody tr:hover{
+    height: 400px !important;
+    cursor: pointer;
+    -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}*/
+

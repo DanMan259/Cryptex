@@ -1,0 +1,19 @@
+.box-shadow-none {
+    box-shadow: none !important;
+}
+.logo-center-lg{
+    position: absolute;
+    top: 7px;
+    bottom: 7px;
+}
+.logo-center-sm{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+#nav-mobile{
+    font-family: 'Roboto', sans-serif;
+}

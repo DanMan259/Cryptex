@@ -49,8 +49,8 @@ Meteor.startup(() => {
         //--------------------------------------------Private Endpoints-------------------------------------------------
 
         //Account Balance
-        const balance = await exchange.fetchBalance();
-        console.log(balance);
+        /*const balance = await exchange.fetchBalance();
+        console.log(balance);*/
 
         //Orders
         /*const orders = await exchange.fetchOrders(symbol);
