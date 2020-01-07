@@ -1,2 +1,2 @@
 # cryptex
-Cryptocurency portfolio management solution
+Cryptocurrency portfolio management solution
