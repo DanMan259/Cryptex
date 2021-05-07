@@ -24,7 +24,7 @@
     "eslint-plugin-meteor": "^4.1.4",
     "eslint-plugin-react": "^7.5.1",
     "faker": "^4.1.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.21",
     "meteor-node-stubs": "^0.3.2",
     "simpl-schema": "^1.4.3"
   }
